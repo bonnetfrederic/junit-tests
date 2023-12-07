@@ -17,7 +17,7 @@ public class Calculator {
     public double divide(double a, double b) {
         if (b == 0) {
             System.out.println("Division par 0 impossible !");
-            return 0;
+            return -1;
         }
         double res = a / b;
         return res;

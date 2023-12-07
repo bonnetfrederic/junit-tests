@@ -34,6 +34,8 @@ public class JunitTestsApplication {
 		System.out.println("10 - 8 = " + res2);
 		System.out.println("6 * 4 = " + res3);
 		System.out.println("27 / 4 = " + res4);
+		double div = myCalc.divide(13, 0);
+		System.out.println("13 / 0 = " + div);
 
 		// java.util.function methods
 		System.out.println("\n java.util.function methods:");
