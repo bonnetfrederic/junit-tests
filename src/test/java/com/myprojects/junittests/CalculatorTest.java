@@ -2,33 +2,37 @@ package com.myprojects.junittests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.platform.commons.annotation.Testable;
+import org.springframework.boot.test.context.SpringBootTest;
 
-@Testable
+@SpringBootTest
 public class CalculatorTest {
+
+    static Calculator myCalc;
+
+    @BeforeAll
+    public static void initMyCalc() {
+        myCalc = new Calculator();
+    }
 
     @Test
     public void calculatorSum() {
-        Calculator myCalc = new Calculator();
         assertEquals(2, myCalc.sum(1, 1));
     }
 
     @Test
     public void calculatorSubstract() {
-        Calculator myCalc = new Calculator();
         assertEquals(1, myCalc.substract(2, 1));
     }
 
     @Test
     public void calculatorMultiply() {
-        Calculator myCalc = new Calculator();
         assertEquals(10, myCalc.multiply(2, 5));
     }
 
     @Test
     public void calculatorDivide() {
-        Calculator myCalc = new Calculator();
-        assertEquals(2, myCalc.divide(10, 5));
+        assertEquals(9.75, myCalc.divide(39, 4));
     }
 }
