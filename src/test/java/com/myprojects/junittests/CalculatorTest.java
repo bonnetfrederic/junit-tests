@@ -17,22 +17,22 @@ public class CalculatorTest {
     }
 
     @Test
-    public void calculatorSum() {
-        assertEquals(2, myCalc.sum(1, 1));
+    public void testCalculatorSum() {
+        assertEquals(2, myCalc.add(1, 1));
     }
 
     @Test
-    public void calculatorSubstract() {
+    public void testCalculatorSubstract() {
         assertEquals(1, myCalc.substract(2, 1));
     }
 
     @Test
-    public void calculatorMultiply() {
+    public void testCalculatorMultiply() {
         assertEquals(10, myCalc.multiply(2, 5));
     }
 
     @Test
-    public void calculatorDivide() {
+    public void testCalculatorDivide() {
         assertEquals(9.75, myCalc.divide(39, 4));
     }
 }

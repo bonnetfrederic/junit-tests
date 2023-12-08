@@ -26,7 +26,7 @@ public class JunitTestsApplication {
 
 		// Calculator methods
 		System.out.println("\n### Calculator methods:");
-		Integer res1 = myCalc.sum(1, 1);
+		Integer res1 = myCalc.add(1, 1);
 		Integer res2 = myCalc.substract(10, 8);
 		Integer res3 = myCalc.multiply(6, 4);
 		double res4 = myCalc.divide(27, 4);
