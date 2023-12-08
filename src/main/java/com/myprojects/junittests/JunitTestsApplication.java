@@ -25,7 +25,7 @@ public class JunitTestsApplication {
 		Calculator myCalc = new Calculator();
 
 		// Calculator methods
-		System.out.println("\n Calculator methods:");
+		System.out.println("\n### Calculator methods:");
 		Integer res1 = myCalc.sum(1, 1);
 		Integer res2 = myCalc.substract(10, 8);
 		Integer res3 = myCalc.multiply(6, 4);
@@ -39,7 +39,7 @@ public class JunitTestsApplication {
 		System.out.println("13 / 0 = " + div);
 
 		// java.util.function methods
-		System.out.println("\n java.util.function methods:");
+		System.out.println("\n### java.util.function methods:");
 		Function<String, Integer> strLengthFunction = str -> str.length();
 		int res5 = strLengthFunction.apply("Hello");
 		System.out.println("java.util.function.Funtion test with (longueur de la chaîne 'Hello'): " + res5);
@@ -56,7 +56,7 @@ public class JunitTestsApplication {
 		System.out.println("java.util.function.Supplier test, with Math.random(): " + randomNumber);
 
 		// Collections
-		System.out.println("\n Collections:");
+		System.out.println("\n### Collections:");
 		System.out.println("\n ° List:");
 		List<String> stringList = new ArrayList<>();
 		stringList.add("one");
@@ -70,6 +70,7 @@ public class JunitTestsApplication {
 		myMap.put("Mike", 13);
 		myMap.put("Steve", 15);
 		myMap.put("Elf", 12);
+		System.out.println("Eléments du Map: " + myMap);
 		for (Map.Entry<String, Integer> entry : myMap.entrySet()) {
 			String key = entry.getKey();
 			Integer value = entry.getValue();
@@ -89,7 +90,7 @@ public class JunitTestsApplication {
 		file.add("Étape 1");
 		file.add("Étape 2");
 		file.add("Étape 3");
-		System.out.println("Prochaine étape : " + file.poll());
+		System.out.println("Prochaine étape de la File " + file + ": " + file.poll());
 
 		System.out.println("\n ° Stack:");
 		Stack<String> strStack = new Stack<>();
@@ -100,7 +101,7 @@ public class JunitTestsApplication {
 		System.out.println("Premier élément de la pile: " + strStack.pop());
 
 		// Stream API
-		System.out.println("\n Stream API");
+		System.out.println("\n### Stream API");
 		List<Integer> intList = Arrays.asList(1,2,3,4,5);
 		System.out.println("Eléments > 2 parmi la liste " + intList + ": ");
 		List<Integer> intList2 = intList
@@ -108,5 +109,6 @@ public class JunitTestsApplication {
 			.filter(intElem -> intElem.intValue() > 2).collect(Collectors.toList());
 		intList2.forEach(i -> System.out.println(i));
 
+		System.out.println();
 	}
 }
