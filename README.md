@@ -10,7 +10,7 @@ and exercises with:
     - Function
     - Predicate
     - Consumer
-    - Suplier
+    - Supplier
 
 - Collections examples
     - List
@@ -18,5 +18,5 @@ and exercises with:
     - Set
     - Queue
     - Stack
-    
+
 - Stream API examples
