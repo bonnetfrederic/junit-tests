@@ -14,6 +14,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -63,8 +64,6 @@ public class JunitTestsApplication {
 		stringList.add("three");
 		stringList.forEach(str -> System.out.print(str + ", "));
 		System.out.println();
-
-		List<Integer> intList = Arrays.asList(1,2,3,4,5);
 		
 		System.out.println("\n ° Map:");
 		Map<String, Integer> myMap = new HashMap<>();
@@ -99,6 +98,15 @@ public class JunitTestsApplication {
 		strStack.push("top");
 		System.out.println("Eléments de la pile: " + strStack);
 		System.out.println("Premier élément de la pile: " + strStack.pop());
+
+		// Stream API
+		System.out.println("\n Stream API");
+		List<Integer> intList = Arrays.asList(1,2,3,4,5);
+		System.out.println("Eléments > 2 parmi la liste " + intList + ": ");
+		List<Integer> intList2 = intList
+			.stream()
+			.filter(intElem -> intElem.intValue() > 2).collect(Collectors.toList());
+		intList2.forEach(i -> System.out.println(i));
 
 	}
 }
