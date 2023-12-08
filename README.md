@@ -11,11 +11,12 @@ and exercises with:
     - Predicate
     - Consumer
     - Suplier
-- Collections examples
 
+- Collections examples
     - List
     - Map
     - Set
     - Queue
     - Stack
+    
 - Stream API examples
